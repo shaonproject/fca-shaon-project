@@ -1,8 +1,11 @@
 [![Socket Badge](https://socket.dev/api/badge/npm/package/fca-horizon-remastered)](https://socket.dev/npm/package/fca-horizon-remastered)
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/JustKemForFun/JustKemForFun)
 
 ## Important !
 
-This package requires NodeJS 14.17.0 to work properly.
+[ ENG ]: This package require NodeJS 14.17.0 to work properly.
+
+[ VIE ]: Gói này yêu cầu NodeJS 14.17.0 để hoạt động bình thường.
 
 ## Notification !
 
