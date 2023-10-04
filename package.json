@@ -1,12 +1,12 @@
 {
   "name": "fca-project-orion",
   "version": "1.0.1",
-  "description": "Facebook-chat-api protect and deploy by Kanzu and HZI Team",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "Avery, David, Maude, Benjamin, UIRI, KanzuWakazaki",
+  "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ivancotacte/fca-project-orion/issues"
