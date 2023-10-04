@@ -20,10 +20,10 @@ module.exports = async function(SessionID) {
                 Database(true).set('PremiumKey', String(global.Fca.Require.FastConfig.PreKey));
                 Database(true).set('UserName', userName);
                 process.env.HalzionVersion = 1973
-                Text = "Bạn Đang Sài Phiên Bản: Premium Access";
+                Text = "You Are Using Version: Premium Access";
             }
             catch (error) {
-                Text = "Lỗi Kết Nối";
+                Text = "Connection errors";
             }
         } else if (global.Fca.Require.FastConfig.PreKey) {
             try {
@@ -31,10 +31,10 @@ module.exports = async function(SessionID) {
                 Database(true).set('PremiumKey', String(global.Fca.Require.FastConfig.PreKey));
                 Database(true).set('UserName', userName);
                 process.env.HalzionVersion = 1973
-                Text = "Bạn Đang Sài Phiên Bản: Premium Access";
+                Text = "You Are Using Version: Premium Access";
             }
             catch (error) {
-                Text = "Lỗi Kết Nối";
+                Text = "Connection errors";
             }
         }
         else if (!global.Fca.Require.FastConfig.PreKey) {
@@ -43,10 +43,10 @@ module.exports = async function(SessionID) {
                 Database(true).set('PremiumKey', String(global.Fca.Require.FastConfig.PreKey));
                 Database(true).set('UserName', userName);
                 process.env.HalzionVersion = 1973
-                Text = "Bạn Đang Sài Phiên Bản: Premium Access";
+                Text = "You Are Using Version: Premium Access";
             }
             catch (error) {
-                Text = "Lỗi Kết Nối";
+                Text = "Connection errors";
             }
         }
     } catch (e) {
@@ -55,10 +55,10 @@ module.exports = async function(SessionID) {
             Database(true).set('PremiumKey', String(global.Fca.Require.FastConfig.PreKey));
             Database(true).set('UserName', userName);
             process.env.HalzionVersion = 1973
-            Text = "Bạn Đang Sài Phiên Bản: Premium Access";
+            Text = "You Are Using Version: Premium Access";
         }
         catch (error) {
-            Text = "Lỗi Kết Nối";
+            Text = "Connection errors";
         }
     }
     if (process.env.HalzionVersion == 1973) {
