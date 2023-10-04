@@ -1,4 +1,4 @@
-[![Socket Badge](https://socket.dev/api/badge/npm/package/fca-horizon-remastered)](https://socket.dev/npm/package/fca-horizon-remastered)
+[![Socket Badge](https://socket.dev/api/badge/npm/package/fca-project-orion)](https://socket.dev/npm/package/fca-project-orion)
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/JustKemForFun/JustKemForFun)
 
 ## Important !
@@ -31,11 +31,11 @@ Note ! If You Want To Use This Api Please See Document At [Here](https://github.
 
 If You Want To Use It, Download It By:
 ```bash
-npm i fca-horizon-remastered
+npm i fca-project-orion
 ```
 or
 ```bash
-npm install fca-horizon-remastered
+npm install fca-project-orion
 ```
 
 It Will Download To node_modules (Your Lib) - Note Replit Will Not Show Anywhere To Find 😪
@@ -44,11 +44,11 @@ It Will Download To node_modules (Your Lib) - Note Replit Will Not Show Anywhere
 
 If You Want To Use The Latest Or Updated Version Then Go To Terminal Or Command Promt Type:
 ```bash
-npm install fca-horizon-remastered@latest
+npm install fca-project-orion@latest
 ```
 Or
 ```bash
-npm i fca-horizon-remastered@latest
+npm i fca-project-orion@latest
 ```
 
 ## If You Want To Test Api
@@ -59,7 +59,7 @@ Please Use With Test Account => [Facebook Whitehat Accounts](https://www.faceboo
 ## Using
 
 ```javascript
-const login = require("fca-horizon-remastered"); // get it from lib
+const login = require("fca-project-orion"); // get it from lib
 
 // log in
 login({email: "Gmail Account", password: "Your Facebook Password"}, (err, api) => {
@@ -99,7 +99,7 @@ You Need To Go To File Mirai.js, Then Find Line
 And Replace It With:
 
 ```js
-     var login = require('fca-horizon-remastered')
+     var login = require('fca-project-orion')
 ```
 
 After that, run normally!
@@ -120,7 +120,7 @@ __Instructions With Appstate__
 
 ```js
 const fs = require("fs");
-const login = require("fca-horizon-remastered");
+const login = require("fca-project-orion");
 
 var credentials = {email: "FB_EMAIL", password: "FB_PASSWORD"}; // account information
 
