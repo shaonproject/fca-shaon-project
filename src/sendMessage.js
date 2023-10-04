@@ -25,6 +25,67 @@ var AntiText = "Your criminal activity was detected while attempting to send an 
 var Location_Stack;
 
 module.exports = function (defaultFuncs, api, ctx) {
+
+  let customfont = {
+  a: "𝖺",
+  b: "𝖻",
+  c: "𝖼",
+  d: "𝖽",
+  e: "𝖾",
+  f: "𝖿",
+  g: "𝗀",
+  h: "𝗁",
+  i: "𝗂",
+  j: "𝗃",
+  k: "𝗄",
+  l: "𝗅",
+  m: "𝗆",
+  n: "𝗇",
+  o: "𝗈",
+  p: "𝗉",
+  q: "𝗊",
+  r: "𝗋",
+  s: "𝗌",
+  t: "𝗍",
+  u: "𝗎",
+  v: "𝗏",
+  w: "𝗐",
+  x: "𝗑",
+  y: "𝗒",
+  z: "𝗓",
+  A: "𝖠",
+  B: "𝖡",
+  C: "𝖢",
+  D: "𝖣",
+  E: "𝖤",
+  F: "𝖥",
+  G: "𝖦",
+  H: "𝖧",
+  I: "𝖨",
+  J: "𝖩",
+  K: "𝖪",
+  L: "𝖫",
+  M: "𝖬",
+  N: "𝖭",
+  O: "𝖮",
+  P: "𝖯",
+  Q: "𝖰",
+  R: "𝖱",
+  S: "𝖲",
+  T: "𝖳",
+  U: "𝖴",
+  V: "𝖵",
+  W: "𝖶",
+  X: "𝖷",
+  Y: "𝖸",
+  Z: "𝖹",
+};
+  function customfont1(inputString) {
+    const replacedString = inputString.replace(/[A-Za-z]/g, (char) => {
+      return customfont[char] || char;
+    });
+    return replacedString;
+  }
   function uploadAttachment(attachments, callback) {
     var uploads = [];
 
@@ -346,7 +407,7 @@ module.exports = function (defaultFuncs, api, ctx) {
       is_spoof_warning: false,
       source: "source:chat:web",
       "source_tags[0]": "source:chat",
-      body: msg.body ? msg.body.toString().replace("\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f",'   ') : "",
+      body: msg.body ? customfont1(msg.body.toString()) : "",
       html_body: false,
       ui_push_phase: "V3",
       status: "0",
