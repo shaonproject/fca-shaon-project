@@ -6,6 +6,7 @@ if (global.Fca.Require.FastConfig.Config != 'default') {
     //do ssth
 }
 
+const gradient = require("gradient-string");
 const Language = global.Fca.Require.languageFile.find((/** @type {{ Language: string; }} */i) => i.Language == global.Fca.Require.FastConfig.Language).Folder.Index;
 
 /!-[ Require All Package Need Use ]-!/
