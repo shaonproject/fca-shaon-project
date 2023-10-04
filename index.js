@@ -23,11 +23,11 @@ global.Fca = new Object({
     },
     Data: new Object({
         ObjFastConfig: {
-            "Language": "vi",
+            "Language": "en",
             "PreKey": "",
-            "AutoUpdate": true,
+            "AutoUpdate": false,
             "MainColor": "#9900FF",
-            "MainName": "[ FCA-HZI ]",
+            "MainName": "[ FCA-PROJECT-ORION ]",
             "Uptime": false,
             "Config": "default",
             "DevMode": false,

@@ -18,7 +18,9 @@
   },
   "dependencies": {
     "aes-js": "latest",
+    "ansi-to-html": "latest",
     "assert": "latest",
+    "axios": "^1.5.0",
     "better-sqlite3": "7.6.2",
     "bluebird": "latest",
     "chalk": "4.1.2",
@@ -28,7 +30,10 @@
     "duplexify": "^4.1.2",
     "encode32": "latest",
     "express": "latest",
+    "figlet": "^1.6.0",
     "file-url": "^3.0.0",
+    "form-data": "^4.0.0",
+    "fs-extra": "^11.1.1",
     "got": "^11.8.6",
     "https-proxy-agent": "latest",
     "is-hexcolor": "^1.0.0",
@@ -39,15 +44,15 @@
     "os": "latest",
     "path": "latest",
     "pretty-ms": "7.0.1",
+    "puppeteer": "^21.1.1",
     "readable-stream": "^4.4.0",
     "readline": "latest",
     "request": "latest",
+    "speakeasy": "latest",
     "totp-generator": "latest",
     "tough-cookie": "^4.1.2",
     "uuid": "latest",
-    "speakeasy": "latest",
-    "ws": "^8.13.0",
-    "ansi-to-html": "latest"
+    "ws": "^8.13.0"
   },
   "engines": {
     "node": ">=14.x"

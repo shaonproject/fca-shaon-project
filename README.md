@@ -9,18 +9,12 @@
 
 ## Notification !
 
-+ We will have Example Video on Channel "Nguyen Thai Hao Official"
++ Original Project(Deprecated): https://github.com/Schmavery/facebook-chat-api
++ This is The Defunct Project https://github.com/KanzuXHorizon/Fca-Horizon-Remastered and Redeveloped By KanzuXHorizon
 
-Original Project(Deprecated): https://github.com/Schmavery/facebook-chat-api
+## Support Language :
 
-Wishing you a good day!, thank you for using HZI products, best regards
-
-KANZUWAKAZAKI(April 15, 2023)
-
-## Support For :
-
-+ Support English, VietNamese !,
-+ All bot if using listenMqtt first.
++ English, VietNamese, Tagalog, Cebuano(Bisaya)
 
 # Api For ChatBot Messenger
 
