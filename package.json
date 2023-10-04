@@ -1,15 +1,6 @@
 {
   "name": "fca-project-orion",
   "version": "1.0.1",
-  "HasProblem": true,
-  "ForceUpdate": true,
-  "Problem": "Update",
-  "Stable_Version": {
-    "Valid_Version": [
-      "1.0.0"
-    ],
-    "RealTime_AutoUpdate": false
-  },
   "description": "Facebook-chat-api protect and deploy by Kanzu and HZI Team",
   "main": "index.js",
   "scripts": {
@@ -98,10 +89,5 @@
       ]
     }
   },
-  "keywords": [
-    "Fca horizon",
-    "fca-horizon-remastered",
-    "horizon fca",
-    "horizon"
-  ]
+  "keywords": []
 }
