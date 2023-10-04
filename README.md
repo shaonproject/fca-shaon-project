@@ -14,7 +14,10 @@
 
 ## Support Language :
 
-+ English, VietNamese, Tagalog, Cebuano(Bisaya)
++ English
++ VietNamese
++ Tagalog
++ Cebuano(Bisaya)
 
 # Api For ChatBot Messenger
 
