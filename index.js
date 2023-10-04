@@ -26,7 +26,7 @@ global.Fca = new Object({
             "Language": "en",
             "PreKey": "",
             "AutoUpdate": false,
-            "MainColor": "#9900FF",
+            "MainColor": "#FFFF00",
             "MainName": "[ FCA-PROJECT-ORION ]",
             "Uptime": false,
             "Config": "default",

@@ -1,6 +1,15 @@
 {
   "name": "fca-project-orion",
   "version": "1.0.0",
+  "HasProblem": true,
+  "ForceUpdate": true,
+  "Problem": "Update",
+  "Stable_Version": {
+    "Valid_Version": [
+      "1.0.0"
+    ],
+    "RealTime_AutoUpdate": false
+  },
   "description": "Facebook-chat-api protect and deploy by Kanzu and HZI Team",
   "main": "index.js",
   "scripts": {
@@ -22,9 +31,9 @@
     "assert": "latest",
     "axios": "^1.5.0",
     "better-sqlite3": "7.6.2",
-    "bluebird": "^2.11.0",
+    "bluebird": "^3.7.2",
     "chalk": "4.1.2",
-    "cheerio": "^0.22.0",
+    "cheerio": "^1.0.0-rc.12",
     "crypto-js": "latest",
     "deasync": "^0.1.28",
     "duplexify": "^4.1.2",
@@ -39,7 +48,7 @@
     "is-hexcolor": "^1.0.0",
     "lodash": "latest",
     "moment": "^2.29.4",
-    "mqtt": "^3.0.0",
+    "mqtt": "^4.3.7",
     "npmlog": "^1.2.0",
     "os": "latest",
     "path": "latest",
@@ -52,7 +61,8 @@
     "totp-generator": "latest",
     "tough-cookie": "^4.1.2",
     "uuid": "latest",
-    "ws": "^8.13.0"
+    "ws": "^8.13.0",
+    "gradient-string": "^2.0.2"
   },
   "engines": {
     "node": ">=14.x"
