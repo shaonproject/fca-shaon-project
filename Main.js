@@ -1007,10 +1007,12 @@ function setUserNameAndPassWord() {
     });
 
     console.clear();
-    console.log(figlet.textSync('Horizon', {font: 'ANSI Shadow',horizontalLayout: 'default',verticalLayout: 'default',width: 0,whitespaceBreak: true }));
-    console.log(chalk.bold.hex('#9900FF')("[</>]") + chalk.bold.yellow(' => ') + "Operating System: " + chalk.bold.red(os.type()));
-    console.log(chalk.bold.hex('#9900FF')("[</>]") + chalk.bold.yellow(' => ') + "Machine Version: " + chalk.bold.red(os.version()));
-    console.log(chalk.bold.hex('#9900FF')("[</>]") + chalk.bold.yellow(' => ') + "Fca Version: " + chalk.bold.red(global.Fca.Version) + '\n');
+    console.log(gradient('orange', 'yellow').multiline(["▒█▀▄▒█▀▄░▄▀▄░░▒█▒██▀░▄▀▀░▀█▀░░░▄▀▄▒█▀▄░█░▄▀▄░█▄░█", "░█▀▒░█▀▄░▀▄▀░▀▄█░█▄▄░▀▄▄░▒█▒▒░░▀▄▀░█▀▄░█░▀▄▀░█▒▀█",].join('\n')));
+    console.log();
+    console.log(gradient("orange","yellow",)('[ FCA-PROJECT-ORION ] > Operating System: ') + (os.type()));
+    console.log(gradient("orange","yellow",)('[ FCA-PROJECT-ORION ] > Machine Version: ') + (os.version()));
+    console.log(gradient("orange","yellow",)('[ FCA-PROJECT-ORION ] > FCA Version: ') + (global.Fca.Version) + '\n');
+    console.log(gradient('orange', 'yellow').multiline([".------------.", "| AUTO LOGIN |", "'------------'"].join('\n')));
     try {
         rl.question(Language.TypeAccount, (Account) => {
             if (!Account.includes("@") && global.Fca.Require.utils.getType(parseInt(Account)) != "Number") return logger.Normal(Language.TypeAccountError, function () { process.exit(1) }); //Very Human
