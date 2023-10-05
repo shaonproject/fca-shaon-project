@@ -2,6 +2,7 @@
 /* eslint-disable linebreak-style */
 
 const chalk = require('chalk');
+const gradient = require('gradient-string');
 var isHexcolor = require('is-hexcolor');
 var getText = function(/** @type {string[]} */ ...Data) {
 	var Main = (Data.splice(0,1)).toString();
@@ -20,7 +21,7 @@ module.exports = {
 		if (isHexcolor(global.Fca.Require.FastConfig.MainColor) != true) {
 			this.Warning(getText(global.Fca.Require.Language.Index.InvaildMainColor,global.Fca.Require.FastConfig.MainColor),process.exit(0));
 		}
-		else console.log(chalk.hex(global.Fca.Require.FastConfig.MainColor).bold(`${global.Fca.Require.FastConfig.MainName || '[ FCA-PROJECT-ORION ]'} > `) + Str);
+		console.log(gradient.rainbow(`${global.Fca.Require.FastConfig.MainName || '[ FCA-PROJECT-ORION ]'} > `) + Str);
 		if (getType(Data) == 'Function' || getType(Data) == 'AsyncFunction') {
 			return Data();
 		}

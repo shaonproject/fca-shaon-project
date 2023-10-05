@@ -817,10 +817,8 @@ function loginHelper(appState, email, password, globalOptions, callback, prCallb
 
 try {
     if (appState) {
-        let projectorion = gradient("orange", "yellow").multiline(
-  ["▒█▀▄▒█▀▄░▄▀▄░░▒█▒██▀░▄▀▀░▀█▀░░░▄▀▄▒█▀▄░█░▄▀▄░█▄░█", "░█▀▒░█▀▄░▀▄▀░▀▄█░█▄▄░▀▄▄░▒█▒▒░░▀▄▀░█▀▄░█░▀▄▀░█▒▀█"].join("\n")
-);
-console.log(projectorion);
+    console.log(gradient('orange', 'yellow').multiline(["▒█▀▄▒█▀▄░▄▀▄░░▒█▒██▀░▄▀▀░▀█▀░░░▄▀▄▒█▀▄░█░▄▀▄░█▄░█", "░█▀▒░█▀▄░▀▄▀░▀▄█░█▄▄░▀▄▄░▒█▒▒░░▀▄▀░█▀▄░█░▀▄▀░█▒▀█",].join('\n')));
+    console.log();
         logger.Normal(Language.OnProcess);
             switch (Database().has("FBKEY")) {
                 case true: {
