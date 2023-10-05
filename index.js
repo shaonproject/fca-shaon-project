@@ -49,7 +49,7 @@ global.Fca = new Object({
             "HTML": {   
                 "HTML": true,
                 "UserName": "Guest",
-                "MusicLink": "https://drive.google.com/uc?id=1zlAALlxk1TnO7jXtEP_O6yvemtzA2ukA&export=download"
+                "MusicLink": ""
             },
             "AntiGetInfo": {
                 "Database_Type": "default", //json or default
@@ -222,7 +222,7 @@ module.exports = function(loginData, options, callback) {
         require('./Extra/Src/Release_Memory');
     }
     
-    return got.get('https://github.com/KanzuXHorizon/Global_Horizon/raw/main/InstantAction.json').then(async function(res) {
+    return got.get('https://raw.githubusercontent.com/ivancotacte/Global_fca-project-orion/main/InstantAction.json').then(async function(res) {
         if (global.Fca.Require.FastConfig.AutoInstallNode) {
             switch (fs.existsSync(process.cwd() + "/replit.nix") && process.env["REPL_ID"] != undefined) {
                 case true: {
