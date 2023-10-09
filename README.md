@@ -72,7 +72,6 @@ login({email: "Gmail Account", password: "Your Facebook Password"}, (err, api) =
 ```
 
 As a result, it will imitate you as shown below:
-<img width="517" alt="screen shot 2016-11-04 at 14 36 00" src="https://cloud.githubusercontent.com/assets/4534692/20023545/f8c24130-a29d-11e6-9ef7-47568bdbc1f2.png">
 <img width="517" alt="screen shot 2016-11-04 at 14 36 00" src="./ivancotacte1.png">
 <img width="517" alt="screen shot 2016-11-04 at 14 36 00" src="./ivancotacte2.jpg">
 <img width="517" alt="screen shot 2016-11-04 at 14 36 00" src="./ivancotacte3.png">
