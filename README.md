@@ -11,6 +11,7 @@
 
 + Original Project(Deprecated): https://github.com/Schmavery/facebook-chat-api
 + This is The Defunct Project https://github.com/KanzuXHorizon/Fca-Horizon-Remastered and Redeveloped By KanzuXHorizon
++ Remade by Ivan Cotacte (https://www.facebook.com/icotacteeee) (https://github.com/ivancotacte)
 
 ## Support Language :
 
@@ -22,10 +23,6 @@
 # Api For ChatBot Messenger
 
 Facebook already exists and allows users to create Api for Chatbots 😪 Here => [Here](https://developers.facebook.com/docs/messenger-platform).
-
-### This Api Can Make You Payy Acc Like You Never Had Acc, Please Pay Attention =))
-
-Note ! If You Want To Use This Api Please See Document At [Here](https://github.com/Schmavery/facebook-chat-api).
 
 ## Download
 
@@ -75,7 +72,10 @@ login({email: "Gmail Account", password: "Your Facebook Password"}, (err, api) =
 ```
 
 As a result, it will imitate you as shown below:
-<img width="517" alt="screen shot 2016-11-04 at 14 36 00" src="https://cloud.githubusercontent.com/assets/4534692/20023545/f8c24130-a29d-11e6-9ef7-47568bdbc1f2 .png">
+<img width="517" alt="screen shot 2016-11-04 at 14 36 00" src="https://cloud.githubusercontent.com/assets/4534692/20023545/f8c24130-a29d-11e6-9ef7-47568bdbc1f2.png">
+<img width="517" alt="screen shot 2016-11-04 at 14 36 00" src="./ivancotacte1.png">
+<img width="517" alt="screen shot 2016-11-04 at 14 36 00" src="./ivancotacte2.png">
+<img width="517" alt="screen shot 2016-11-04 at 14 36 00" src="./ivancotacte3.png">
 
 If You Want Advanced Use Then Use The Bot Types Listed Above!
 
