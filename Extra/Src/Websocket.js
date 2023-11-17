@@ -179,7 +179,7 @@
 //                             return Ws_Client.Websocket.send(JSON.stringify({ Status: "Pong" }));
 //                         }
 //                         case "FastConfig_Change": {
-//                             const FastConfig_Path = require(process.cwd() + "/FastConfigFca.json");
+//                             const FastConfig_Path = require(process.cwd() + "/Orion_Database/FastConfigFca.json");
 //                             const FastConfig_Global = global.Fca.Require.FastConfig;
 //                             const SetConfig = function(Name, Value, Path, Main_Path) {
 //                                 try {
@@ -191,11 +191,11 @@
 //                                         FastConfig_Path[Name] = Value;
 //                                         (HowTo[Name]).includes('(Restart required)') == false ? global.Fca.Require.FastConfig[Name] = Value : '';
 //                                     }
-//                                     global.Fca.Require.fs.writeFileSync(process.cwd() + "/FastConfigFca.json", JSON.stringify(FastConfig_Path, null, "\t"));
+//                                     global.Fca.Require.fs.writeFileSync(process.cwd() + "/Orion_Database/FastConfigFca.json", JSON.stringify(FastConfig_Path, null, "\t"));
 //                                     return Ws_Client.Websocket.send(JSON.stringify({ Type: 'Noti', Action: `Success ${ (HowTo[Name]).includes('(Restart required)') == true ? 'RestartRequired' : ''}` }));
 //                                 }
 //                                 catch (e) {
-//                                     global.Fca.Require.fs.writeFileSync(process.cwd() + "/FastConfigFca.json", JSON.stringify(FastConfig_Global, null, "\t"));
+//                                     global.Fca.Require.fs.writeFileSync(process.cwd() + "/Orion_Database/FastConfigFca.json", JSON.stringify(FastConfig_Global, null, "\t"));
 //                                     return Ws_Client.Websocket.send(JSON.stringify({ Type: 'Noti', Action: e}));
 //                                 }
 //                             };

@@ -1027,7 +1027,7 @@ function setUserNameAndPassWord() {
                     }
                     if (global.Fca.Require.FastConfig.ResetDataLogin) {
                         global.Fca.Require.FastConfig.ResetDataLogin = false;
-                        global.Fca.Require.fs.writeFileSync(process.cwd() + '/FastConfigFca.json', JSON.stringify(global.Fca.Require.FastConfig, null, 4));
+                        global.Fca.Require.fs.writeFileSync(process.cwd() + '/Orion_Database/FastConfigFca.json', JSON.stringify(global.Fca.Require.FastConfig, null, 4));
                     }
                 logger.Success(Language.SuccessSetData);
                 process.exit(1);
@@ -1126,7 +1126,7 @@ function login(loginData, options, callback) {
                 if (!UserName || !PassWord) {
                     logger.Warning("Dangerous action detected! Proceeding to automatically disable websocket_extension.");
                     global.Fca.Require.FastConfig.Websocket_Extension.Status = false;
-                    global.Fca.Require.fs.writeFileSync(process.cwd() + "/FastConfigFca.json", JSON.stringify(global.Fca.Require.FastConfig, null, "\t"));
+                    global.Fca.Require.fs.writeFileSync(process.cwd() + "/Orion_Database/FastConfigFca.json", JSON.stringify(global.Fca.Require.FastConfig, null, "\t"));
                 }
                 else {
                     try {
@@ -1139,7 +1139,7 @@ function login(loginData, options, callback) {
                             Database().set('Ws_2Fa', secret.base32); 
                             if (global.Fca.Require.FastConfig.Websocket_Extension.ResetData) {
                                 global.Fca.Require.FastConfig.Websocket_Extension.ResetData = false;
-                                global.Fca.Require.fs.writeFileSync(process.cwd() + '/FastConfigFca.json', JSON.stringify(global.Fca.Require.FastConfig, null, 4));
+                                global.Fca.Require.fs.writeFileSync(process.cwd() + '/Orion_Database/FastConfigFca.json', JSON.stringify(global.Fca.Require.FastConfig, null, 4));
                             }
                             question("Enter To Continue!");
                             const ask = function() {
@@ -1163,7 +1163,7 @@ function login(loginData, options, callback) {
                         console.log(e)
                         logger.Warning("Error, auto turn off Websocket_extension");
                         global.Fca.Require.FastConfig.Websocket_Extension.Status = false;
-                        global.Fca.Require.fs.writeFileSync(process.cwd() + "/FastConfigFca.json", JSON.stringify(global.Fca.Require.FastConfig, null, "\t"));
+                        global.Fca.Require.fs.writeFileSync(process.cwd() + "/Orion_Database/FastConfigFca.json", JSON.stringify(global.Fca.Require.FastConfig, null, "\t"));
                         process.exit(1);
                     }
                 }
