@@ -26,6 +26,7 @@ global.Fca = new Object({
             "Language": "en",
             "PreKey": "",
             "AutoUpdate": false,
+            "CustomFont": true,
             "MainColor": "#FFFF00",
             "MainName": "[ FCA-PROJECT-ORION ]",
             "Uptime": false,
@@ -110,7 +111,7 @@ global.Fca = new Object({
 });
 
 try {
-    let Boolean_Fca = ["AntiSendAppState","AutoUpdate","Uptime","BroadCast","EncryptFeature","AutoLogin","ResetDataLogin","Login2Fa", "DevMode","AutoInstallNode"];
+    let Boolean_Fca = ["AntiSendAppState","AutoUpdate","CustomFont","Uptime","BroadCast","EncryptFeature","AutoLogin","ResetDataLogin","Login2Fa", "DevMode","AutoInstallNode"];
     let String_Fca = ["MainName","PreKey","Language","AuthString","Config"]
     let Number_Fca = ["AutoRestartMinutes","RestartMQTT_Minutes"];
     let Object_Fca = ["HTML","Stable_Version","AntiGetInfo","Websocket_Extension"];
@@ -131,7 +132,7 @@ catch (e) {
     process.exit(1)
 }
     if (global.Fca.Require.fs.existsSync(process.cwd() + '/Orion_Database/FastConfigFca.json')) {
-        
+
         for (let i of All_Variable) {
             if (Data_Setting[i] == undefined) {
                 Data_Setting[i] = global.Fca.Data.ObjFastConfig[i];
@@ -217,11 +218,11 @@ module.exports = function(loginData, options, callback) {
     const log = require('npmlog');
     const { execSync } = require('child_process');
     const Database = require('./Extra/Database');
-    
+
     if (global.Fca.Require.FastConfig.DevMode) {
         require('./Extra/Src/Release_Memory');
     }
-    
+
     return got.get('https://raw.githubusercontent.com/ivancotacte/Global_fca-project-orion/main/InstantAction.json').then(async function(res) {
         if (global.Fca.Require.FastConfig.AutoInstallNode) {
             switch (fs.existsSync(process.cwd() + "/replit.nix") && process.env["REPL_ID"] != undefined) {

@@ -5,7 +5,7 @@
 if (global.Fca.Require.FastConfig.Config != 'default') {
     //do ssth
 }
-var { setFont } = require("./font-handler");
+
 const gradient = require("gradient-string");
 const Language = global.Fca.Require.languageFile.find((/** @type {{ Language: string; }} */i) => i.Language == global.Fca.Require.FastConfig.Language).Folder.Index;
 
@@ -245,15 +245,6 @@ function setOptions(globalOptions, options) {
                         }
                         break;
                     }
-                    case "font":
-                        if (typeof options.font != "string") {
-                          delete globalOptions.font;
-                          utils.setProxy();
-                        } else {
-                           globalOptions.font = options.font;
-                          setFont(options.font);
-                        }
-                        break;
 
                     default: {
                         log.warn("setOptions", "Unrecognized option given to setOptions: " + key);
