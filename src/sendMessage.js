@@ -5,6 +5,8 @@
  * 21/4/2022
  * 
  * Remodel By: https://www.facebook.com/icotacteeee
+ * Added: Custom Font
+ * 11/26/2023
 */
 
 var utils = require("../utils");
