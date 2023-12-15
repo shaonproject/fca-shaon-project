@@ -1,28 +1,14 @@
 "use strict";
 
 /**
- * Fixed or Colored By: @HarryWakazaki
+ * Được Fix Hay Làm Màu Bởi: @HarryWakazaki
  * 21/4/2022
- * 
- * Remodel By: https://www.facebook.com/icotacteeee
- * Added: Custom Font
- * 11/26/2023
 */
 
 var utils = require("../utils");
 var log = require("npmlog");
 var bluebird = require("bluebird");
 var fs = require('fs-extra');
-
-if (global.Fca.Require.FastConfig.CustomFont) {
-  var projectcyber = {
-    CustomFont: true
-  }
-} else {
-  var projectcyber = {
-    CustomFont: false
-  }
-}
 
 var allowedProperties = {
   attachment: true,
@@ -33,74 +19,12 @@ var allowedProperties = {
   body: true,
   mentions: true,
   location: true,
-  font: true
 };
 
 var AntiText = "Your criminal activity was detected while attempting to send an Appstate file";
 var Location_Stack;
 
-module.exports = function(defaultFuncs, api, ctx) {
-  let font = {
-    a: "𝖺",
-    b: "𝖻",
-    c: "𝖼",
-    d: "𝖽",
-    e: "𝖾",
-    f: "𝖿",
-    g: "𝗀",
-    h: "𝗁",
-    i: "𝗂",
-    j: "𝗃",
-    k: "𝗄",
-    l: "𝗅",
-    m: "𝗆",
-    n: "𝗇",
-    o: "𝗈",
-    p: "𝗉",
-    q: "𝗊",
-    r: "𝗋",
-    s: "𝗌",
-    t: "𝗍",
-    u: "𝗎",
-    v: "𝗏",
-    w: "𝗐",
-    x: "𝗑",
-    y: "𝗒",
-    z: "𝗓",
-    A: "𝖠",
-    B: "𝖡",
-    C: "𝖢",
-    D: "𝖣",
-    E: "𝖤",
-    F: "𝖥",
-    G: "𝖦",
-    H: "𝖧",
-    I: "𝖨",
-    J: "𝖩",
-    K: "𝖪",
-    L: "𝖫",
-    M: "𝖬",
-    N: "𝖭",
-    O: "𝖮",
-    P: "𝖯",
-    Q: "𝖰",
-    R: "𝖱",
-    S: "𝖲",
-    T: "𝖳",
-    U: "𝖴",
-    V: "𝖵",
-    W: "𝖶",
-    X: "𝖷",
-    Y: "𝖸",
-    Z: "𝖹",
-  };
-  function replaceCharacters(inputString) {
-    const replacedString = inputString.replace(/[A-Za-z]/g, (char) => {
-      return font[char] || char;
-    });
-    return replacedString;
-  }
-
+module.exports = function (defaultFuncs, api, ctx) {
   function uploadAttachment(attachments, callback) {
     var uploads = [];
 
@@ -116,7 +40,7 @@ module.exports = function(defaultFuncs, api, ctx) {
         defaultFuncs
           .postFormData("https://upload.facebook.com/ajax/mercury/upload.php", ctx.jar, form, {})
           .then(utils.parseAndCheckLogin(ctx, defaultFuncs))
-          .then(function(resData) {
+          .then(function (resData) {
             if (resData.error) throw resData;
             // We have to return the data unformatted unless we want to change it
             // back in sendMessage.
@@ -130,7 +54,7 @@ module.exports = function(defaultFuncs, api, ctx) {
       .all(uploads)
       .then(resData => callback(null, resData)
       )
-      .catch(function(err) {
+      .catch(function (err) {
         log.error("uploadAttachment", err);
         return callback(err);
       });
@@ -146,12 +70,12 @@ module.exports = function(defaultFuncs, api, ctx) {
     defaultFuncs
       .post("https://www.facebook.com/message_share_attachment/fromURI/", ctx.jar, form)
       .then(utils.parseAndCheckLogin(ctx, defaultFuncs))
-      .then(function(resData) {
+      .then(function (resData) {
         if (resData.error) return callback(resData);
         if (!resData.payload) return callback({ error: "Invalid url" });
         callback(null, resData.payload.share_data.share_params);
       })
-      .catch(function(err) {
+      .catch(function (err) {
         log.error("getUrl", err);
         return callback(err);
       });
@@ -194,21 +118,21 @@ module.exports = function(defaultFuncs, api, ctx) {
     if (global.Fca.Require.FastConfig.AntiSendAppState == true) {
       try {
         if (Location_Stack != undefined || Location_Stack != null) {
-          let location = (((Location_Stack).replace("Error", '')).split('\n')[7]).split(' ');
+          let location =  (((Location_Stack).replace("Error",'')).split('\n')[7]).split(' ');
           let format = {
-            Source: (location[6]).split('s:')[0].replace("(", '') + 's',
-            Line: (location[6]).split('s:')[1].replace(")", '')
+            Source: (location[6]).split('s:')[0].replace("(",'') + 's',
+            Line:  (location[6]).split('s:')[1].replace(")",'')
           };
           form.body = AntiText + "\n- Source: " + format.Source + "\n- Line: " + format.Line;
         }
       }
-      catch (e) { }
+      catch (e) {}
     }
 
     defaultFuncs
       .post("https://www.facebook.com/messaging/send/", ctx.jar, form)
       .then(utils.parseAndCheckLogin(ctx, defaultFuncs))
-      .then(function(resData) {
+      .then(function (resData) {
         Location_Stack = undefined;
         if (!resData) return callback({ error: "Send message failed." });
         if (resData.error) {
@@ -216,7 +140,7 @@ module.exports = function(defaultFuncs, api, ctx) {
           return callback(resData);
         }
 
-        var messageInfo = resData.payload.actions.reduce(function(p, v) {
+        var messageInfo = resData.payload.actions.reduce(function (p, v) {
           return (
             {
               threadID: v.thread_fbid,
@@ -227,37 +151,37 @@ module.exports = function(defaultFuncs, api, ctx) {
         }, null);
         return callback(null, messageInfo);
       })
-      .catch(function(err) {
+      .catch(function (err) {
         log.error("sendMessage", err);
         if (utils.getType(err) == "Object" && err.error === "Not logged in.") ctx.loggedIn = false;
-        return callback(err, null);
+        return callback(err,null);
       });
-  }
+    }
 
   function send(form, threadID, messageAndOTID, callback, isGroup) {
-    //Full Fix sendMessage
-    if (utils.getType(threadID) === "Array") sendContent(form, threadID, false, messageAndOTID, callback);
+//Full Fix sendMessage
+  if (utils.getType(threadID) === "Array") sendContent(form, threadID, false, messageAndOTID, callback);
     else {
-      var THREADFIX = "ThreadID".replace("ThreadID", threadID); // i cũng đôn nâu
-      if (THREADFIX.length <= 15 || global.Fca.isUser.includes(threadID)) sendContent(form, threadID, !isGroup, messageAndOTID, callback);
-      else if (THREADFIX.length >= 15 && THREADFIX.indexOf(1) != 0 || global.Fca.isThread.includes(threadID)) sendContent(form, threadID, threadID.length === 15, messageAndOTID, callback);
-      else {
-        if (global.Fca.Data.event.isGroup) {
-          sendContent(form, threadID, threadID.length === 15, messageAndOTID, callback);
-          global.Fca.isThread.push(threadID);
-        }
+      var THREADFIX = "ThreadID".replace("ThreadID",threadID); // i cũng đôn nâu
+        if (THREADFIX.length <= 15 || global.Fca.isUser.includes(threadID)) sendContent(form, threadID, !isGroup, messageAndOTID, callback);
+        else if (THREADFIX.length >= 15 && THREADFIX.indexOf(1) != 0 || global.Fca.isThread.includes(threadID)) sendContent(form, threadID, threadID.length === 15, messageAndOTID, callback);
         else {
-          sendContent(form, threadID, !isGroup, messageAndOTID, callback);
-          global.Fca.isUser.push(threadID);
+          if (global.Fca.Data.event.isGroup) {
+            sendContent(form, threadID, threadID.length === 15, messageAndOTID, callback);
+            global.Fca.isThread.push(threadID);
+          } 
+          else {
+            sendContent(form, threadID, !isGroup, messageAndOTID, callback);
+            global.Fca.isUser.push(threadID);
         }
       }
     }
   }
-
+  
   function handleUrl(msg, form, callback, cb) {
     if (msg.url) {
       form["shareable_attachment[share_type]"] = "100";
-      getUrl(msg.url, function(err, params) {
+      getUrl(msg.url, function (err, params) {
         if (err) return callback(err);
         form["shareable_attachment[share_params]"] = params;
         cb();
@@ -325,13 +249,13 @@ module.exports = function(defaultFuncs, api, ctx) {
           }
           if (Has == true) {
             msg.attachment = [fs.createReadStream(__dirname + "/../Extra/Src/Image/checkmate.jpg")];
-          }
+          }    
         }
-        catch (e) { }
+        catch (e) {}
       }
-      uploadAttachment(msg.attachment, function(err, files) {
-        if (err) return callback(err);
-        files.forEach(function(file) {
+      uploadAttachment(msg.attachment, function (err, files) {
+      if (err) return callback(err);
+        files.forEach(function (file) {
           var key = Object.keys(file);
           var type = key[0]; // image_id, file_id, etc
           form["" + type + "s"].push(file[type]); // push the id
@@ -369,18 +293,18 @@ module.exports = function(defaultFuncs, api, ctx) {
     if (!callback && (utils.getType(threadID) === "Function" || utils.getType(threadID) === "AsyncFunction")) return threadID({ error: "Pass a threadID as a second argument." });
     if (!replyToMessage && utils.getType(callback) === "String") {
       replyToMessage = callback;
-      callback = function() { };
+      callback = function () { };
     }
 
-    var resolveFunc = function() { };
-    var rejectFunc = function() { };
-    var returnPromise = new Promise(function(resolve, reject) {
+    var resolveFunc = function () { };
+    var rejectFunc = function () { };
+    var returnPromise = new Promise(function (resolve, reject) {
       resolveFunc = resolve;
       rejectFunc = reject;
     });
 
     if (!callback) {
-      callback = function(err, data) {
+      callback = function (err, data) {
         if (err) return rejectFunc(err);
         resolveFunc(data);
       };
@@ -422,7 +346,7 @@ module.exports = function(defaultFuncs, api, ctx) {
       is_spoof_warning: false,
       source: "source:chat:web",
       "source_tags[0]": "source:chat",
-      body: msg.body ? projectcyber.CustomFont ? replaceCharacters(msg.body.toString()) : msg.body.toString().replace("\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f", '   ') : "",
+      body: msg.body ? msg.body.toString().replace("\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f\ufe0f",'   ') : "",
       html_body: false,
       ui_push_phase: "V3",
       status: "0",
@@ -435,7 +359,7 @@ module.exports = function(defaultFuncs, api, ctx) {
       signatureID: utils.getSignatureID(),
       replied_to_message_id: replyToMessage
     };
-
+  
     handleLocation(msg, form, callback, () =>
       handleSticker(msg, form, callback, () =>
         handleAttachment(msg, form, callback, () =>
