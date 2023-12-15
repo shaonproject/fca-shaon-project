@@ -6,7 +6,7 @@ const logger = require("../logger");
 const getText = global.Fca.getText;
 var language = require("../Language/index.json");
 const fs = require("fs");
-language = language.find(i => i.Language == require(process.cwd() + "/Abdulla_Database/FastConfigFca.json").Language).Folder.ExtraGetThread;
+language = language.find(i => i.Language == require(process.cwd() + "/FastConfigFca.json").Language).Folder.ExtraGetThread;
 
 if (global.Fca.Require.FastConfig.AntiGetInfo.Database_Type == "json") {
     if (!fs.existsSync(process.cwd() + "/Abdulla_Database/Threads.json")) {
@@ -14,7 +14,7 @@ if (global.Fca.Require.FastConfig.AntiGetInfo.Database_Type == "json") {
     }
 }
 else if (global.Fca.Require.FastConfig.AntiGetInfo.Database_Type != "default" && global.Fca.Require.FastConfig.AntiGetInfo.Database_Type != "json") {
-    logger.Warning("Database_Type in /Abdulla_Database/FastConfigFca.json is not valid. Only default and json are valid.");
+    logger.Warning("Database_Type in FastConfigFca.json is not valid. Only default and json are valid.");
     process.exit(0);
 }
 
