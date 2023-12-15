@@ -48,7 +48,7 @@ global.Fca = new Object({
                 "AppState_Path": "appstate.json"
             },
             "HTML": {   
-                "HTML": false,
+                "HTML": true,
                 "UserName": "Guest",
                 "MusicLink": ""
             },
