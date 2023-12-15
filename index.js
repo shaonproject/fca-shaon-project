@@ -28,7 +28,7 @@ global.Fca = new Object({
             "AutoUpdate": false,
             "CustomFont": true,
             "MainColor": "#FFFF00",
-            "MainName": "[ FCA-PROJECT-CYBER ]",
+            "MainName": "[ FCA-PROJECT-ABDULLA ]",
             "Uptime": false,
             "Config": "default",
             "DevMode": false,
