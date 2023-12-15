@@ -38,10 +38,10 @@ module.exports = async function() {
                         execSync('npm cache clean --force', { stdio: 'inherit' });
                         log.info("[ FCA-UPDATE ] •","Cache Cleaned, Trying Another Method 2...");
                         await new Promise(resolve => setTimeout(resolve, 3000));
-                        //self delete fca-project-orion folder from node_modules
+                        //self delete fca-project-cyber folder from node_modules
                         fs.rmdirSync((process.cwd() + "/node_modules/fca-project-cyber" || __dirname + '../../../fca-project-cyber'), { recursive: true });
                         await new Promise(resolve => setTimeout(resolve, 3000));
-                        execSync(`npm install fca-project-orion@${json.Version}`, { stdio: 'inherit' });
+                        execSync(`npm install fca-project-cyber@${json.Version}`, { stdio: 'inherit' });
                         log.info("[ FCA-UPDATE ] •","Update Complete, Restarting...");
                         await new Promise(resolve => setTimeout(resolve, 3000));
                         Database(true).set("Instant_Update", Date.now());
