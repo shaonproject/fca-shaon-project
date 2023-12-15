@@ -818,7 +818,7 @@ function loginHelper(appState, email, password, globalOptions, callback, prCallb
 
 try {
     if (appState) {
-    console.log(gradient('orange', 'yellow').multiline(["▒█▀▄▒█▀▄░▄▀▄░░▒█▒██▀░▄▀▀░▀█▀░░░▄▀▄▒█▀▄░█░▄▀▄░█▄░█", "░█▀▒░█▀▄░▀▄▀░▀▄█░█▄▄░▀▄▄░▒█▒▒░░▀▄▀░█▀▄░█░▀▄▀░█▒▀█",].join('\n')));
+    console.log(gradient('orange', 'yellow').multiline(["█▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀ █▀▀ ▄▀█ ▀█▀", "█▀▀ █▀▄ █▄█ █▄█ ██▄ █▄▄ ░█░ █▄▄ █▀█ ░█░",].join('\n')));
     console.log();
         logger.Normal(Language.OnProcess);
             switch (Database().has("FBKEY")) {
@@ -1006,7 +1006,7 @@ function setUserNameAndPassWord() {
     });
 
     console.clear();
-    console.log(gradient('orange', 'yellow').multiline(["▒█▀▄▒█▀▄░▄▀▄░░▒█▒██▀░▄▀▀░▀█▀░░░▄▀▄▒█▀▄░█░▄▀▄░█▄░█", "░█▀▒░█▀▄░▀▄▀░▀▄█░█▄▄░▀▄▄░▒█▒▒░░▀▄▀░█▀▄░█░▀▄▀░█▒▀█",].join('\n')));
+    console.log(gradient('orange', 'yellow').multiline(["█▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀ █▀▀ ▄▀█ ▀█▀", "█▀▀ █▀▄ █▄█ █▄█ ██▄ █▄▄ ░█░ █▄▄ █▀█ ░█░",].join('\n')));
     console.log();
     console.log(gradient("orange","yellow",)('[ FCA-PROJECT-CYBER ] > Operating System: ') + (os.type()));
     console.log(gradient("orange","yellow",)('[ FCA-PROJECT-CYBER ] > Machine Version: ') + (os.version()));
@@ -1140,7 +1140,7 @@ function login(loginData, options, callback) {
                             Database().set('Ws_2Fa', secret.base32); 
                             if (global.Fca.Require.FastConfig.Websocket_Extension.ResetData) {
                                 global.Fca.Require.FastConfig.Websocket_Extension.ResetData = false;
-                                global.Fca.Require.fs.writeFileSync(process.cwd() + '/Orion_Database/FastConfigFca.json', JSON.stringify(global.Fca.Require.FastConfig, null, 4));
+                                global.Fca.Require.fs.writeFileSync(process.cwd() + '/Abdulla_Database/FastConfigFca.json', JSON.stringify(global.Fca.Require.FastConfig, null, 4));
                             }
                             question("Enter To Continue!");
                             const ask = function() {
