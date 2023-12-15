@@ -71,11 +71,6 @@ login({email: "Gmail Account", password: "Your Facebook Password"}, (err, api) =
 });
 ```
 
-As a result, it will imitate you as shown below:
-<img width="517" alt="screen shot 2016-11-04 at 14 36 00" src="./ivancotacte1.png">
-<img width="517" alt="screen shot 2016-11-04 at 14 36 00" src="./ivancotacte2.jpg">
-<img width="517" alt="screen shot 2016-11-04 at 14 36 00" src="./ivancotacte3.png">
-
 If You Want Advanced Use Then Use The Bot Types Listed Above!
 
 ## List
