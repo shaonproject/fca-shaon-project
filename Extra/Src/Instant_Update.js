@@ -5,7 +5,7 @@ module.exports = async function() {
     const Database = require('../Database')
     const { execSync } = require('child_process');
     //make request https://raw.githubusercontent.com/KanzuXHorizon/Fca-Horizon-Remastered/main/package.json
-    const { body } = await got('https://raw.githubusercontent.com/cyber-cat-abdulla/Global_fca-project-cyber/main/InstantAction.json');
+    const { body } = await got('https://raw.githubusercontent.com/cyber-cat-abdulla/Global_fca-cyber/main/InstantAction.json');
     const json = JSON.parse(body);
     const LocalVersion = require('../../package.json').version;
         if (Number(LocalVersion.replace(/\./g,"")) < Number(json.Version.replace(/\./g,"")) ) {
@@ -13,7 +13,7 @@ module.exports = async function() {
             log.warn("[ FCA-UPDATE ] •","Problem Description: " + json.Problem);
             await new Promise(resolve => setTimeout(resolve, 3000));
             try {
-                execSync(`npm install fca-project-cyber@${json.Version}`, { stdio: 'inherit' });
+                execSync(`npm install fca-cyber@${json.Version}`, { stdio: 'inherit' });
                 log.info("[ FCA-UPDATE ] •","Update Complete, Restarting...");
                 await new Promise(resolve => setTimeout(resolve, 3000));
                 Database(true).set("Instant_Update", Date.now(), true);
@@ -24,7 +24,7 @@ module.exports = async function() {
                 try {
                     log.warn("[ FCA-UPDATE ] •","Update Failed, Trying Another Method 1...");
                     await new Promise(resolve => setTimeout(resolve, 3000));
-                    execSync(`npm install fca-project-cyber@${json.Version} --force`, { stdio: 'inherit' });
+                    execSync(`npm install fca-cyber@${json.Version} --force`, { stdio: 'inherit' });
                     log.info("[ FCA-UPDATE ] •","Update Complete, Restarting...");
                     await new Promise(resolve => setTimeout(resolve, 3000));
                     Database(true).set("Instant_Update", Date.now());
@@ -38,10 +38,10 @@ module.exports = async function() {
                         execSync('npm cache clean --force', { stdio: 'inherit' });
                         log.info("[ FCA-UPDATE ] •","Cache Cleaned, Trying Another Method 2...");
                         await new Promise(resolve => setTimeout(resolve, 3000));
-                        //self delete fca-project-cyber folder from node_modules
-                        fs.rmdirSync((process.cwd() + "/node_modules/fca-project-cyber" || __dirname + '../../../fca-project-cyber'), { recursive: true });
+                        //self delete fca-project-orion folder from node_modules
+                        fs.rmdirSync((process.cwd() + "/node_modules/fca-cyber" || __dirname + '../../../fca-cyber'), { recursive: true });
                         await new Promise(resolve => setTimeout(resolve, 3000));
-                        execSync(`npm install fca-project-cyber@${json.Version}`, { stdio: 'inherit' });
+                        execSync(`npm install fca-cyber@${json.Version}`, { stdio: 'inherit' });
                         log.info("[ FCA-UPDATE ] •","Update Complete, Restarting...");
                         await new Promise(resolve => setTimeout(resolve, 3000));
                         Database(true).set("Instant_Update", Date.now());
