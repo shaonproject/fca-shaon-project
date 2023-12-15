@@ -14,7 +14,7 @@
   "homepage": "https://github.com/cyber-cat-abdulla/fca-project-cyber#readme",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ivancotacte/fca-project-orion.git"
+    "url": "git://github.com/cyber-cat-abdulla/fca-project-cyber.git"
   },
   "dependencies": {
     "aes-js": "latest",
