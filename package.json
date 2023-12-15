@@ -1,6 +1,6 @@
 {
-  "name": "fca-project-cyber",
-  "version": "1.1.17",
+  "name": "fca-cyber",
+  "version": "1.1.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,19 +9,19 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cyber-cat-abdulla/fca-project-cyber/issues"
+    "url": "https://github.com/cyber-cat-abdulla/fca-cyber/issues"
   },
-  "homepage": "https://github.com/cyber-cat-abdulla/fca-project-cyber#readme",
+  "homepage": "https://github.com/cyber-cat-abdulla/fca-cyber#readme",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cyber-cat-abdulla/fca-project-cyber.git"
+    "url": "git://github.com/cyber-cat-abdulla/fca-cyber.git"
   },
   "dependencies": {
     "aes-js": "latest",
     "ansi-to-html": "latest",
     "assert": "latest",
     "axios": "^1.5.0",
-    "better-sqlite3": "latest",
+    "better-sqlite3": "7.6.2",
     "bluebird": "latest",
     "chalk": "4.1.2",
     "cheerio": "latest",
