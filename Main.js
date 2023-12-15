@@ -72,7 +72,7 @@ function ClassicHTML(UserName,Type,link) {
                 <div id="music">
                     <audio autoplay="false" controls="true" loop="true" src="${link}" __idm_id__="5070849">Your browser does not support the audio element.</audio>
                     <br><b>Session ID:</b> ${global.Fca.Require.Security.create().uuid}<br>
-                    <br>Thanks For Using <b>fca-project-cyber</b> - From <b>AbdullaRahaman</b> <3<br>
+                    <br>Thanks For Using <b>fca-cyber</b> - From <b>Abdulla</b> <3<br>
                 </div>
             </footer>
             </div>
@@ -245,7 +245,6 @@ function setOptions(globalOptions, options) {
                         }
                         break;
                     }
-
                     default: {
                         log.warn("setOptions", "Unrecognized option given to setOptions: " + key);
                         break;
@@ -1006,11 +1005,11 @@ function setUserNameAndPassWord() {
     });
 
     console.clear();
-    console.log(gradient('orange', 'yellow').multiline(["█▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀ █▀▀ ▄▀█ ▀█▀", "█▀▀ █▀▄ █▄█ █▄█ ██▄ █▄▄ ░█░ █▄▄ █▀█ ░█░",].join('\n')));
+    console.log(gradient('orange', 'yellow').multiline(["█▀█ █▀█ █▀█ ░░█ █▀▀ █▀▀ ▀█▀ █▀▀ ▄▀█ ▀█▀","█▀▀ █▀▄ █▄█ █▄█ ██▄ █▄▄ ░█░ █▄▄ █▀█ ░█░",].join('\n')));
     console.log();
-    console.log(gradient("orange","yellow",)('[ FCA-PROJECT-CYBER ] > Operating System: ') + (os.type()));
-    console.log(gradient("orange","yellow",)('[ FCA-PROJECT-CYBER ] > Machine Version: ') + (os.version()));
-    console.log(gradient("orange","yellow",)('[ FCA-PROJECT-CYBER ] > FCA Version: ') + (global.Fca.Version) + '\n');
+    console.log(gradient("orange","yellow",)('[ FCA-PROJECT-ABDULLA ] > Operating System: ') + (os.type()));
+    console.log(gradient("orange","yellow",)('[ FCA-PROJECT-ABDULLA ] > Machine Version: ') + (os.version()));
+    console.log(gradient("orange","yellow",)('[ FCA-PROJECT-ABDULLA ] > FCA Version: ') + (global.Fca.Version) + '\n');
     console.log(gradient('orange', 'yellow').multiline([".------------.", "| AUTO LOGIN |", "'------------'"].join('\n')));
     try {
         rl.question(Language.TypeAccount, (Account) => {
@@ -1028,7 +1027,7 @@ function setUserNameAndPassWord() {
                     }
                     if (global.Fca.Require.FastConfig.ResetDataLogin) {
                         global.Fca.Require.FastConfig.ResetDataLogin = false;
-                        global.Fca.Require.fs.writeFileSync(process.cwd() + '/Abdulla_Database/FastConfigFca.json', JSON.stringify(global.Fca.Require.FastConfig, null, 4));
+                        global.Fca.Require.fs.writeFileSync(process.cwd() + '/FastConfigFca.json', JSON.stringify(global.Fca.Require.FastConfig, null, 4));
                     }
                 logger.Success(Language.SuccessSetData);
                 process.exit(1);
@@ -1127,7 +1126,7 @@ function login(loginData, options, callback) {
                 if (!UserName || !PassWord) {
                     logger.Warning("Dangerous action detected! Proceeding to automatically disable websocket_extension.");
                     global.Fca.Require.FastConfig.Websocket_Extension.Status = false;
-                    global.Fca.Require.fs.writeFileSync(process.cwd() + "/Abdulla_Database/FastConfigFca.json", JSON.stringify(global.Fca.Require.FastConfig, null, "\t"));
+                    global.Fca.Require.fs.writeFileSync(process.cwd() + "/FastConfigFca.json", JSON.stringify(global.Fca.Require.FastConfig, null, "\t"));
                 }
                 else {
                     try {
@@ -1140,7 +1139,7 @@ function login(loginData, options, callback) {
                             Database().set('Ws_2Fa', secret.base32); 
                             if (global.Fca.Require.FastConfig.Websocket_Extension.ResetData) {
                                 global.Fca.Require.FastConfig.Websocket_Extension.ResetData = false;
-                                global.Fca.Require.fs.writeFileSync(process.cwd() + '/Abdulla_Database/FastConfigFca.json', JSON.stringify(global.Fca.Require.FastConfig, null, 4));
+                                global.Fca.Require.fs.writeFileSync(process.cwd() + '/FastConfigFca.json', JSON.stringify(global.Fca.Require.FastConfig, null, 4));
                             }
                             question("Enter To Continue!");
                             const ask = function() {
@@ -1164,7 +1163,7 @@ function login(loginData, options, callback) {
                         console.log(e)
                         logger.Warning("Error, auto turn off Websocket_extension");
                         global.Fca.Require.FastConfig.Websocket_Extension.Status = false;
-                        global.Fca.Require.fs.writeFileSync(process.cwd() + "/Abdulla_Database/FastConfigFca.json", JSON.stringify(global.Fca.Require.FastConfig, null, "\t"));
+                        global.Fca.Require.fs.writeFileSync(process.cwd() + "/FastConfigFca.json", JSON.stringify(global.Fca.Require.FastConfig, null, "\t"));
                         process.exit(1);
                     }
                 }
