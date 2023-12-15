@@ -28,7 +28,7 @@ global.Fca = new Object({
             "AutoUpdate": false,
             "CustomFont": true,
             "MainColor": "#FFFF00",
-            "MainName": "[ FCA-PROJECT-ORION ]",
+            "MainName": "[ FCA-PROJECT-CYBER ]",
             "Uptime": false,
             "Config": "default",
             "DevMode": false,
@@ -48,7 +48,7 @@ global.Fca = new Object({
                 "AppState_Path": "appstate.json"
             },
             "HTML": {   
-                "HTML": true,
+                "HTML": false,
                 "UserName": "Guest",
                 "MusicLink": ""
             },
@@ -136,7 +136,7 @@ catch (e) {
         for (let i of All_Variable) {
             if (Data_Setting[i] == undefined) {
                 Data_Setting[i] = global.Fca.Data.ObjFastConfig[i];
-                global.Fca.Require.fs.writeFileSync(process.cwd() + "/Orion_Database/FastConfigFca.json", JSON.stringify(Data_Setting, null, "\t"));
+                global.Fca.Require.fs.writeFileSync(process.cwd() + "/Abdulla_Database/FastConfigFca.json", JSON.stringify(Data_Setting, null, "\t"));
             }
             else continue; 
         } //Check Variable
