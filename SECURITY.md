@@ -1,6 +1,6 @@
 # Security Policy
 
-+ if have any Vulnerability finded contact: EMON HAWLADAR (emonhawladar311@gmail.com) or (Facebook.com/EMon.BHai.FACEBOOK). Thanks!
++ if have any Vulnerability finded contact: SHAON AHMED (shaonproject25@gmail.com) or (Facebook.com/Hey.Its.Me.Shaon.Ahmed). Thanks!
 
 ## Supported Versions
 
