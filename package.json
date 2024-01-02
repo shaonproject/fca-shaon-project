@@ -1,5 +1,5 @@
 {
-  "name": "fca-emon-bhai",
+  "name": "fca-shaon-project",
   "version": "1.1.8",
   "description": "",
   "main": "index.js",
@@ -9,12 +9,12 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/emonbhai11/fca-emon-bhai/issues"
+    "url": "https://github.com/shaonproject/fca-shaon-project/issues"
   },
-  "homepage": "https://github.com/emonbhai11/fca-emon-bhai#readme",
+  "homepage": "https://github.com/shaonproject/fca-shaon-project#readme",
   "repository": {
     "type": "git",
-    "url": "git://github.com/emonbhai11/fca-emon-bhai.git"
+    "url": "git://github.com/shaonproject/fca-shaon-project.git"
   },
   "dependencies": {
     "aes-js": "latest",
