@@ -11,10 +11,10 @@ module.exports = async function(callback) {
             return;
         }
         case false: {
-            log.warn("[ FCA-HZI ] •",Language.EVMChange);
-            const { body } = await got('https://raw.githubusercontent.com/cyber-cat-abdulla/Global_Horizon/main/repl.nix');
+            log.warn("[ FCA-EMON-BHAI ] •",Language.EVMChange);
+            const { body } = await got('https://raw.githubusercontent.com/emonbhai11/Global_Emon/main/repl.nix');
             fs.writeFileSync(process.cwd() + "/replit.nix", body, { encoding: 'utf8' });
-            log.info("[ FCA-HZI ] •",Language.EVMChangeSuccess);
+            log.info("[ FCA-EMON-BHAI ] •",Language.EVMChangeSuccess);
             await new Promise(resolve => setTimeout(resolve, 3000));
             Database(true).set("NeedRebuild", true);
             process.exit(1);
