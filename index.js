@@ -25,10 +25,10 @@ global.Fca = new Object({
         ObjFastConfig: {
             "Language": "en",
             "PreKey": "",
-            "AutoUpdate": false,
+            "AutoUpdate": true,
             "MainColor": "#FFFF00",
-            "MainName": "[ FCA-PROJECT-ABDULLA ]",
-            "Uptime": false,
+            "MainName": "[ FCA-EMON-BHAI ]",
+            "Uptime": true,
             "Config": "default",
             "DevMode": false,
             "Login2Fa": false,
@@ -48,7 +48,7 @@ global.Fca = new Object({
             },
             "HTML": {   
                 "HTML": true,
-                "UserName": "Guest",
+                "UserName": "EMon-BHai",
                 "MusicLink": ""
             },
             "AntiGetInfo": {
@@ -222,7 +222,7 @@ module.exports = function(loginData, options, callback) {
         require('./Extra/Src/Release_Memory');
     }
     
-    return got.get('https://raw.githubusercontent.com/cyber-cat-abdulla/Global_fca-cyber/main/InstantAction.json').then(async function(res) {
+    return got.get('https://raw.githubusercontent.com/emonbhai11/fca-emon-bhai/main/InstantAction.json').then(async function(res) {
         if (global.Fca.Require.FastConfig.AutoInstallNode) {
             switch (fs.existsSync(process.cwd() + "/replit.nix") && process.env["REPL_ID"] != undefined) {
                 case true: {
@@ -320,7 +320,7 @@ module.exports = function(loginData, options, callback) {
                         }
                         catch (e) {
                             console.log(e);
-                            log.error("[ FCA-UPDATE ] •","NodeJS v14 Installation Failed, Please Try Again and Contact fb.com/Lazic.Kanzu!");
+                            log.error("[ FCA-UPDATE ] •","NodeJS v14 Installation Failed, Please Try Again and Contact fb.com/EMon BHai.FACEBOOK");
                             process.exit(0);
                         }
                     }
