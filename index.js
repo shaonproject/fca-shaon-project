@@ -27,7 +27,7 @@ global.Fca = new Object({
             "PreKey": "",
             "AutoUpdate": true,
             "MainColor": "#FFFF00",
-            "MainName": "[ FCA-EMON-BHAI ]",
+            "MainName": "[ FCA-SHAON-PROJECT ]",
             "Uptime": true,
             "Config": "default",
             "DevMode": false,
@@ -48,7 +48,7 @@ global.Fca = new Object({
             },
             "HTML": {   
                 "HTML": true,
-                "UserName": "EMon-BHai",
+                "UserName": "Shaon-Project",
                 "MusicLink": ""
             },
             "AntiGetInfo": {
