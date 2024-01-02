@@ -1,5 +1,5 @@
 {
-  "name": "fca-cyber",
+  "name": "fca-emon-bhai",
   "version": "1.1.7",
   "description": "",
   "main": "index.js",
@@ -9,12 +9,12 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cyber-cat-abdulla/fca-cyber/issues"
+    "url": "https://github.com/emonbhai11/fca-emon-bhai/issues"
   },
-  "homepage": "https://github.com/cyber-cat-abdulla/fca-cyber#readme",
+  "homepage": "https://github.com/emonbhai11/fca-emon-bhai#readme",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cyber-cat-abdulla/fca-cyber.git"
+    "url": "git://github.com/emonbhai11/fca-emon-bhai.git"
   },
   "dependencies": {
     "aes-js": "latest",
