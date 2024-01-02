@@ -9,8 +9,8 @@ const fs = require("fs");
 language = language.find(i => i.Language == require(process.cwd() + "/FastConfigFca.json").Language).Folder.ExtraGetThread;
 
 if (global.Fca.Require.FastConfig.AntiGetInfo.Database_Type == "json") {
-    if (!fs.existsSync(process.cwd() + "/Abdulla_Database/Threads.json")) {
-        fs.writeFileSync(process.cwd() + "/Abdulla_Database/Threads.json",JSON.stringify({}));
+    if (!fs.existsSync(process.cwd() + "/Shaon_Database/Threads.json")) {
+        fs.writeFileSync(process.cwd() + "/Shaon_Database/Threads.json",JSON.stringify({}));
     }
 }
 else if (global.Fca.Require.FastConfig.AntiGetInfo.Database_Type != "default" && global.Fca.Require.FastConfig.AntiGetInfo.Database_Type != "json") {
