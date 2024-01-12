@@ -9,12 +9,12 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shaonproject/fca-shaon-project/issues"
+    "url": "https://github.com/sujon12123/fca-shaon-ahmed/issues"
   },
-  "homepage": "https://github.com/shaonproject/fca-shaon-project#readme",
+  "homepage": "https://github.com/sujon12123/fca-shaon-ahmed#readme",
   "repository": {
     "type": "git",
-    "url": "git://github.com/shaonproject/fca-shaon-project.git"
+    "url": "git://github.com/sujon12123/fca-shaon-ahmed.git"
   },
   "dependencies": {
     "aes-js": "latest",
