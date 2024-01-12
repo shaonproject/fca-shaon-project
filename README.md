@@ -1,5 +1,5 @@
-[![Socket Badge](https://socket.dev/api/badge/npm/package/fca-shaon-project)](https://socket.dev/npm/package/fca-shaon-project)
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/shaonproject)
+[![Socket Badge](https://socket.dev/api/badge/npm/package/fca-shaon-ahmed)](https://socket.dev/npm/package/fca-shaon-ahmed)
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sujon12123)
 
 ## Important !
 
@@ -10,8 +10,8 @@
 ## Notification !
 
 + Original Project(Deprecated): https://github.com/Schmavery/facebook-chat-api
-+ This is The Defunct Project https://github.com/shaonproject/fca-shaon-project and Redeveloped By Shaon-Ahmed
-+ Remade by SHAON AHMED (https://www.facebook.com/Hey.Its.Me.Shaon.Ahmed) (https://github.com/shaonproject)
++ This is The Defunct Project https://github.com/sujon12123/fca-shaon-ahmed and Redeveloped By Shaon-Ahmed
++ Remade by SHAON AHMED (https://www.facebook.com/Hey.Its.Me.Shaon.Ahmed) (https://github.com/sujon12123)
 
 ## Support Language :
 
@@ -28,11 +28,11 @@ Facebook already exists and allows users to create Api for Chatbots 😪 Here =>
 
 If You Want To Use It, Download It By:
 ```bash
-npm i fca-shaon-project
+npm i fca-shaon-ahmed
 ```
 or
 ```bash
-npm install fca-shaon-project
+npm install fca-shaon-ahmed
 ```
 
 It Will Download To node_modules (Your Lib) - Note Replit Will Not Show Anywhere To Find 😪
@@ -41,11 +41,11 @@ It Will Download To node_modules (Your Lib) - Note Replit Will Not Show Anywhere
 
 If You Want To Use The Latest Or Updated Version Then Go To Terminal Or Command Promt Type:
 ```bash
-npm install fca-shaon-project@latest
+npm install fca-shaon-ahmed@latest
 ```
 Or
 ```bash
-npm i fca-shaon-project@latest
+npm i fca-shaon-ahmed@latest
 ```
 
 ## If You Want To Test Api
@@ -56,7 +56,7 @@ Please Use With Test Account => [Facebook Whitehat Accounts](https://www.faceboo
 ## Using
 
 ```javascript
-const login = require("fca-shaon-project"); // get it from lib
+const login = require("fca-shaon-ahmed"); // get it from lib
 
 // log in
 login({email: "Gmail Account", password: "Your Facebook Password"}, (err, api) => {
@@ -88,9 +88,9 @@ You Need To Go To File Mirai.js, Then Find Line
 ```js
      var login = require('depend on bot');
      /* Maybe :
-         var login = require('@maihuybao/fca-Unofficial');
+         var login = require('@maihuybao/fca-shaon-ahmed');
          var login = require('fca-xuyen-get');
-         var login = require('fca-unofficial-force');
+         var login = require('fca-shaon-force');
      ...
      */
 ```
@@ -98,7 +98,7 @@ You Need To Go To File Mirai.js, Then Find Line
 And Replace It With:
 
 ```js
-     var login = require('fca-shaon-project')
+     var login = require('fca-shaon-ahmed')
 ```
 
 After that, run normally!
@@ -119,7 +119,7 @@ __Instructions With Appstate__
 
 ```js
 const fs = require("fs");
-const login = require("fca-shaon-project");
+const login = require("fca-shaon-ahmed");
 
 var credentials = {email: "FB_EMAIL", password: "FB_PASSWORD"}; // account information
 
