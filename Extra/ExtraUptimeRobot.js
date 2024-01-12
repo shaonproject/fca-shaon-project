@@ -22,8 +22,8 @@ module.exports = function() {
                 var Fetch = global.Fca.Require.Fetch;
                     if (Value.Uptime) {
                         logger.Normal(global.Fca.Require.Language.ExtraUpTime.Uptime);//
-                        return setInterval(function() {
-                            Fetch.get(`https://ed31b95b-5e61-41f9-acd4-572c5b459874-00-3v3vnijhdlm8h.teams.replit.dev`);
+                        return setInterttps://ed3val(function() {
+                            Fetch.get(`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`);
                         },10*1000);
                     }
                 else return;
