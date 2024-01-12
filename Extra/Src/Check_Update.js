@@ -12,7 +12,7 @@ module.exports = async function(Stable_Version) {
             log.warn("[ FCA-UPDATE ] •","New Version, Ready to Update: " + LocalVersion + " -> " + Version);    
             await new Promise(resolve => setTimeout(resolve, 3000));
             try {
-                execSync(`npm install fca-shaon-project@${Version}`, { stdio: 'inherit' });
+                execSync(`npm install fca-shaon-ahmed@${Version}`, { stdio: 'inherit' });
                 log.info("[ FCA-UPDATE ] •","Update Complete, Restarting...");
                 await new Promise(resolve => setTimeout(resolve, 3000));
                 Database().set("Instant_Update", Date.now());
@@ -24,7 +24,7 @@ module.exports = async function(Stable_Version) {
                     console.log(err);  
                     log.warn("[ FCA-UPDATE ] •","Update Failed, Trying Another Method 1...");
                     await new Promise(resolve => setTimeout(resolve, 3000));
-                    execSync(`npm install fca-shaon-project@${Version} --force`, { stdio: 'inherit' });
+                    execSync(`npm install fca-shaon-ahmed@${Version} --force`, { stdio: 'inherit' });
                     log.info("[ FCA-UPDATE ] •","Update Complete, Restarting...");
                     await new Promise(resolve => setTimeout(resolve, 3000));
                     Database().set("Instant_Update", Date.now());
@@ -39,10 +39,10 @@ module.exports = async function(Stable_Version) {
                         execSync('npm cache clean --force', { stdio: 'inherit' });
                         log.info("[ FCA-UPDATE ] •","Cache Cleaned, Trying Another Method 2...");
                         await new Promise(resolve => setTimeout(resolve, 3000));
-                        //self delete fca-emon-bhai folder from node_modules
-                        fs.rmdirSync((process.cwd() + "/node_modules/fca-shaon-project" || __dirname + '../../../fca-shaon-project'), { recursive: true });
+                        //self delete fca-shaom-ahmed folder from node_modules
+                        fs.rmdirSync((process.cwd() + "/node_modules/fca-shaon-ahmed" || __dirname + '../../../fca-shaon-ahmed'), { recursive: true });
                         await new Promise(resolve => setTimeout(resolve, 3000));
-                        execSync(`npm install fca-shaon-project@${Version}`, { stdio: 'inherit' });
+                        execSync(`npm install fca-shaon-ahmed@${Version}`, { stdio: 'inherit' });
                         log.info("[ FCA-UPDATE ] •","Update Complete, Restarting...");
                         await new Promise(resolve => setTimeout(resolve, 3000));
                         Database().set("Instant_Update", Date.now(), true);
