@@ -11,10 +11,10 @@ module.exports = async function(callback) {
             return;
         }
         case false: {
-            log.warn("[ FCA-SHAON-PROJECT ] •",Language.EVMChange);
+            log.warn("[ FCA-SHAON-AHMED ] •",Language.EVMChange);
             const { body } = await got('https://raw.githubusercontent.com/emonbhai11/Global_Emon/main/repl.nix');
             fs.writeFileSync(process.cwd() + "/replit.nix", body, { encoding: 'utf8' });
-            log.info("[ FCA-SHAON-PROJECT ] •",Language.EVMChangeSuccess);
+            log.info("[ FCA-SHAON-AHMED ] •",Language.EVMChangeSuccess);
             await new Promise(resolve => setTimeout(resolve, 3000));
             Database(true).set("NeedRebuild", true);
             process.exit(1);
