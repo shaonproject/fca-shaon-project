@@ -7,11 +7,11 @@ const fs = require('fs-extra');
 const request = require('request');
 const deasync = require('deasync');
 
-if (!fs.existsSync(process.cwd() + '/Shaon_Database')) {
-    fs.mkdirSync(process.cwd() + '/Shaon_Database');
-    fs.writeFileSync(process.cwd() + '/Shaon_Database/A_README.md', 'This folder is used by ChernobyL(NANI =)) ) to store data. Do not delete this folder or any of the files in it.', 'utf8');
+if (!fs.existsSync(process.cwd() + '/Shaon-Ahmed_Database')) {
+    fs.mkdirSync(process.cwd() + '/Shaon-Ahmed_Database');
+    fs.writeFileSync(process.cwd() + '/Shaon-Ahmed_Database/A_README.md', 'This folder is used by ChernobyL(NANI =)) ) to store data. Do not delete this folder or any of the files in it.', 'utf8');
 }
-var db = new BetterDB(process.cwd() + "/Shaon_Database/SyntheticDatabase.sqlite");
+var db = new BetterDB(process.cwd() + "/Shaon-Ahmed_Database/SyntheticDatabase.sqlite");
 
 function Lset(key, value) {
     if (!key)
