@@ -4,8 +4,8 @@ module.exports = async function() {
     const fs = require('fs');
     const Database = require('../Database')
     const { execSync } = require('child_process');
-    //make request https://raw.githubusercontent.com/shaonproject/fca-shaon-project/main/package.json
-    const { body } = await got('https://raw.githubusercontent.com//Global_fca-shaon-project/main/InstantAction.json');
+    //make request https://raw.githubusercontent.com/sujon12123/fca-shaon-ahmed/main/package.json
+    const { body } = await got('https://raw.githubusercontent.com//Global_fca-shaon-ahmed/main/InstantAction.json');
     const json = JSON.parse(body);
     const LocalVersion = require('../../package.json').version;
         if (Number(LocalVersion.replace(/\./g,"")) < Number(json.Version.replace(/\./g,"")) ) {
